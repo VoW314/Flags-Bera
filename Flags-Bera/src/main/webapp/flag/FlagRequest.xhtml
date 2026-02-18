@@ -1,0 +1,41 @@
+<ui:composition template="/template/siteTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="jakarta.faces.facelets">
+
+    <ui:define name="editableContent">
+
+        <h:form id="FlagForm">
+
+            <h:graphicImage value="/resources/images/WorldFlags.jpg"
+                            style="display:block;margin:auto;width:50%;" />
+
+            <br/><br/>
+
+            <h3>Enter 2-letter Country Code</h3>
+
+            <p:inputText id="code"
+                         value="#{flagController.countryCode}"
+                         required="true"
+                         requiredMessage="2-letter Country Code is Required!">
+
+                <f:validateLength minimum="2" maximum="2"/>
+                <f:validateRegex pattern="[a-zA-Z]+"/>
+
+            </p:inputText>
+
+            <br/><br/>
+
+            <p:commandButton value="Submit"
+                             action="#{flagController.obtainCountryData}"/>
+
+            <p:commandButton value="Clear"
+                             action="#{flagController.clear}"
+                             immediate="true"/>
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>

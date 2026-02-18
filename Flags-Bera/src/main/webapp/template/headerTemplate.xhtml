@@ -46,7 +46,7 @@ siteTemplate for the entire site, achieving great maintainability.
                  ***************************
                  -->
                 <td align="center" valign="middle">
-                    <span class="headerTitle">Flag</span>
+                    <span class="headerTitle">Country Flag</span>
                 </td>
                 <!--
                 ***************************************
@@ -63,12 +63,14 @@ siteTemplate for the entire site, achieving great maintainability.
                         <p:commandButton id="dynaButton" value="Menu" type="button" icon="pi pi-bars"/>
                         <p:menu overlay="true" trigger="dynaButton" my="left top" at="left bottom" style="white-space: nowrap; width: auto !important;">
                             <p:menuitem value="Home" outcome="/index" icon="fas fa-home"/>
+
+                            <p:menuitem value="Country Flag" outcome="/flag/FlagRequest" icon="fa-solid fa-flag"/>
                             <!-- Display Kelley Blue Book homepage in a new tab / window -->
-                            <p:menuitem value="Country Reports" url="https://www.countryreports.org//" target="_blank" icon="fas fa-car"/>
+                            <p:menuitem value="Country Reports" url="https://www.countryreports.org//" target="_blank" icon="fa-solid fa-folder"/>
                             <!-- Display Consumer Reports Build & Buy Car Buying Service homepage in a new tab / window -->
                             <p:menuitem value="World Atlas"
                                         url="https://www.worldatlas.com/"
-                                        target="_blank" icon="fas fa-list"/>
+                                        target="_blank" icon="fa-solid fa-globe"/>
                         </p:menu>
                     </div>
                 </td>

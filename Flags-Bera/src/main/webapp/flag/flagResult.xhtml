@@ -1,0 +1,35 @@
+<!--
+  - Created by Shreyas Bera on 2026.2.18
+  - Copyright © 2026 Osman Balci. All rights reserved
+  -->
+
+<ui:composition template="/template/siteTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets">
+
+    <ui:define name="content">
+
+        <div style="text-align:center;">
+
+            <h2>
+                #{flagController.countryName}
+                (#{flagController.countryCode})
+                Country Flag
+            </h2>
+
+            <br/>
+
+            <h:graphicImage value="#{flagController.countryFlagImageUrl}"
+                            alt="Country Flag"
+                            style="width:300px;" />
+
+            <br/><br/>
+
+            <h:button value="Search Again"
+                      outcome="/flag/FlagRequest" />
+
+        </div>
+
+    </ui:define>
+</ui:composition>
